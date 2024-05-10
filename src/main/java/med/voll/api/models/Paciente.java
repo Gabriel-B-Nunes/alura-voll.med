@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import med.voll.api.dto.PacienteDTO;
+import med.voll.api.dto.PacientePutDTO;
 
 @Getter
 @Setter
@@ -23,6 +24,7 @@ public class Paciente {
     private String cpf;
     @Embedded
     private Endereco endereco;
+    private boolean ativo;
 
     public Paciente(PacienteDTO pacienteDTO) {
         this.nome = pacienteDTO.nome();
@@ -30,5 +32,25 @@ public class Paciente {
         this.telefone = pacienteDTO.telefone();
         this.cpf = pacienteDTO.cpf();
         this.endereco = new Endereco(pacienteDTO.endereco());
+        this.ativo = true;
+    }
+
+    public void atualizar(PacientePutDTO pacientePutDTO) {
+        if (pacientePutDTO.nome() != null) {
+            this.nome = pacientePutDTO.nome();
+        }
+        if (pacientePutDTO.telefone() != null) {
+            this.telefone = pacientePutDTO.telefone();
+        }
+        if (pacientePutDTO.email() != null) {
+            this.email = pacientePutDTO.email();
+        }
+        if (pacientePutDTO.enderecoDTO() != null) {
+            this.endereco.atualizar(pacientePutDTO.enderecoDTO());
+        }
+    }
+
+    public void deletar() {
+        this.ativo = false;
     }
 }
