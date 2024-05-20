@@ -1,4 +1,4 @@
-package med.voll.api.models;
+package med.voll.api.domain.models;
 
 import jakarta.persistence.*;
 import jakarta.validation.Valid;
@@ -6,8 +6,8 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import med.voll.api.dto.MedicoDTO;
-import med.voll.api.dto.MedicoPutDTO;
+import med.voll.api.domain.dto.MedicoDTO;
+import med.voll.api.domain.dto.MedicoPutDTO;
 
 @Getter
 @Setter

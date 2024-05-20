@@ -1,12 +1,12 @@
-package med.voll.api.models;
+package med.voll.api.domain.models;
 
 import jakarta.persistence.*;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import med.voll.api.dto.PacienteDTO;
-import med.voll.api.dto.PacientePutDTO;
+import med.voll.api.domain.dto.PacienteDTO;
+import med.voll.api.domain.dto.PacientePutDTO;
 
 @Getter
 @Setter
