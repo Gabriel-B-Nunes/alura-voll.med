@@ -13,7 +13,7 @@ import med.voll.api.domain.dto.MedicoPutDTO;
 @Setter
 @NoArgsConstructor
 @EqualsAndHashCode(of = "id")
-@Entity
+@Entity(name = "Medico")
 @Table(name = "medicos")
 public class Medico {
     @Id

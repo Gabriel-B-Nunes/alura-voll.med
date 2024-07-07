@@ -6,7 +6,6 @@ import med.voll.api.domain.models.Paciente;
 public record PacienteDetalhadoDTO(Long id,
                                    String nome,
                                    String email,
-
                                    String telefone,
                                    String cpf,
                                    Endereco endereco) {
